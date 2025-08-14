@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Your Shopping List";
+}
+
+<div class="hero-section">
+    <div class="container text-center py-5">
+        <h1 class="display-4 fw-bold text-primary mb-4">
+            <i class="fas fa-shopping-basket me-3"></i>Your Shared Shopping List
+        </h1>
+        <p class="lead text-muted mb-5">Add items, check them off, and share with everyone!</p>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="add-item-card">
+                    <div class="input-group mb-3">
+                        <input type="text" id="newItemInput" class="form-control form-control-lg" 
+                               placeholder="What do you need to buy?" autocomplete="off">
+                        <button class="btn btn-success btn-lg" type="button" id="addItemBtn">
+                            <i class="fas fa-plus me-2"></i>Add Item
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <div id="loadingSpinner" class="text-center py-4" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            
+            <div id="emptyState" class="text-center py-5" style="display: none;">
+                <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+                <h3 class="text-muted">Your shopping list is empty</h3>
+                <p class="text-muted">Add your first item above to get started!</p>
+            </div>
+            
+            <div id="shoppingList" class="shopping-list">
+                <!-- Items will be loaded here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            shoppingListApp = new ShoppingListApp();
+            shoppingListApp.init();
+        });
+    </script>
+}
