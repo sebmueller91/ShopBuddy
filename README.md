@@ -1,6 +1,6 @@
 # ShopBuddy 🛒
 
-A simple, fun shopping list web application where users can collaboratively add and remove items from a shared shopping list.
+A simple, fun shopping list web application where users can collaboratively add and remove items from a shared shopping list. Perfect for households, roommates, or small teams!
 
 ## Features
 
